@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Friday Cricket Scoreboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Toss Screen -->
+  <section id="toss-screen" class="screen active">
+
+    <h1>🏏 Friday Cricket</h1>
+
+    <h2>Coin Toss</h2>
+
+    <div class="buttons">
+
+      <button id="headBtn">HEAD</button>
+
+      <button id="tailBtn">TAIL</button>
+
+    </div>
+
+    <p id="selectedCall">Selected: None</p>
+
+    <button id="flipBtn">FLIP COIN</button>
+
+    <h3 id="result"></h3>
+
+    <button id="continueBtn" style="display:none;">
+      CONTINUE
+    </button>
+
+  </section>
+
+  <!-- Setup Screen -->
+  <section id="setup-screen" class="screen">
+
+    <h2>Match Setup</h2>
+
+    <label>Overs</label>
+
+    <input
+  type="number"
+  id="overs"
+  value="8"
+  min="1"
+  max="20"
+/>
+
+        <button id="startMatchBtn">
+      START MATCH
+    </button>
+
+  </section>
+
+  <!-- Main Scoreboard Screen -->
+
+<section id="score-screen" class="screen">
+
+  <h2 id="inningsTitle">
+    1st Innings
+  </h2>
+
+  <h3 id="targetDisplay" style="display:none;">
+    Target: 0
+  </h3>
+
+  <h1 id="scoreDisplay">
+    0/0
+  </h1>
+
+  <h3 id="oversDisplay">
+    0.0 Overs
+  </h3>
+
+  <h3 id="ballsLeftDisplay">
+    Balls Left: 0
+  </h3>
+
+  <h3 id="needDisplay" style="display:none;">
+    Need 0 runs from 0 balls
+  </h3>
+
+  <h2 id="resultDisplay"></h2>
+
+  <h3>Current Over</h3>
+
+  <div id="currentOverDisplay">
+    -
+  </div>
+
+  <div class="buttons">
+
+    <button class="run-btn" onclick="addRun(0)">0</button>
+    <button class="run-btn" onclick="addRun(1)">1</button>
+
+    <button class="run-btn" onclick="addRun(2)">2</button>
+    <button class="run-btn" onclick="addRun(3)">3</button>
+
+    <button class="run-btn" onclick="addRun(4)">4</button>
+    <button class="run-btn" onclick="addRun(6)">6</button>
+
+    <button class="wicket-btn" onclick="addWicket()">
+      Wicket
+    </button>
+
+    <button class="wide-btn" onclick="addWide()">
+      Wide
+    </button>
+
+    <button class="noball-btn" onclick="addNoBall()">
+      No Ball
+    </button>
+
+    <button class="deadball-btn" onclick="addDeadBall()">
+      Dead Ball
+    </button>
+
+    <button class="undo-btn" onclick="undoLastBall()">
+      Undo Last Ball
+    </button>
+
+    <button class="end-btn" onclick="endInnings()">
+      End Innings
+    </button>
+
+  </div>
+
+  <h3 class="history-title">
+    Over History
+  </h3>
+
+  <div id="overHistoryDisplay">
+    No completed overs yet
+  </div>
+
+</section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

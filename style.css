@@ -1,0 +1,510 @@
+/* =========================
+   FRIDAY CRICKET THEME
+========================= */
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+
+  background: linear-gradient(
+    135deg,
+    #0b6623,
+    #1e7d32
+  );
+
+  color: white;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+/* =========================
+   SCREENS
+========================= */
+
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+
+h2 {
+  font-size: 36px;
+  color: white;
+}
+
+h3 {
+  color: #f5f5f5;
+}
+
+/* =========================
+   SCORE PANEL
+========================= */
+
+#scoreDisplay,
+#chaseScoreDisplay {
+
+  font-size: 90px;
+
+  font-weight: bold;
+
+  color: #ffd700;
+
+  margin: 10px 0;
+
+  text-shadow:
+    2px 2px 5px black;
+}
+#overs {
+
+    width: 100%;
+
+    height: 70px;
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    border-radius: 12px;
+
+    padding-left: 20px;
+
+    box-sizing: border-box;
+}
+
+/* =========================
+   CURRENT OVER
+========================= */
+
+#currentOverDisplay {
+
+  background: white;
+
+  color: black;
+
+  padding: 18px;
+
+  border-radius: 15px;
+
+  min-height: 40px;
+
+  margin-bottom: 20px;
+
+  font-size: 28px;
+
+  font-weight: bold;
+}
+/* =========================
+   OVER HISTORY
+========================= */
+
+#overHistoryDisplay {
+
+  background: white;
+
+  color: black;
+
+  padding: 20px;
+
+  border-radius: 15px;
+
+  margin-bottom: 25px;
+
+  max-height: 350px;
+
+  overflow-y: auto;
+
+  font-size: 22px;
+
+  font-weight: bold;
+
+  text-align: left;
+}
+/* =========================
+   INPUTS
+========================= */
+
+input {
+  width: 90%;
+  padding: 15px;
+  font-size: 20px;
+  margin-bottom: 20px;
+
+  border: none;
+  border-radius: 10px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+
+  width: 100%;
+
+  height: 90px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  font-size: 32px;
+
+  font-weight: bold;
+
+  color: white;
+
+  cursor: pointer;
+}
+/* =========================
+   RUN BUTTONS
+========================= */
+
+.run-btn {
+  background: #2ecc71;
+  color: white;
+}
+
+/* =========================
+   WICKET
+========================= */
+
+.wicket-btn {
+  background: #e53935;
+  color: white;
+}
+
+/* =========================
+   WIDE
+========================= */
+
+.wide-btn {
+  background: #ff9800;
+  color: white;
+}
+
+/* =========================
+   NO BALL
+========================= */
+
+.noball-btn {
+  background: #2196f3;
+  color: white;
+}
+
+/* =========================
+   DEAD BALL
+========================= */
+
+.deadball-btn {
+  background: #757575;
+  color: white;
+}
+
+/* =========================
+   UNDO
+========================= */
+
+.undo-btn {
+  background: #9c27b0;
+  color: white;
+}
+
+/* =========================
+   END INNINGS
+========================= */
+
+.end-btn {
+  background: #8b0000;
+  color: white;
+}
+
+/* =========================
+   TOSS BUTTONS
+========================= */
+
+#headBtn,
+#tailBtn {
+
+  background: white;
+
+  color: black;
+
+  border: 3px solid #ffd700;
+
+  font-size: 30px;
+
+  font-weight: bold;
+}
+/* =========================
+   RESULT AREA
+========================= */
+
+#resultDisplay {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffd700;
+  margin-top: 20px;
+}
+
+.buttons {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 12px;
+
+  margin-top: 20px;
+}
+
+#oversDisplay,
+#ballsLeftDisplay,
+#needDisplay {
+
+  font-size: 28px;
+
+  font-weight: bold;
+}
+/* ==========================
+   MOBILE V4
+========================== */
+
+.buttons {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 15px;
+
+  margin-top: 20px;
+
+  margin-bottom: 25px;
+}
+
+button {
+
+  width: 100%;
+
+  height: 85px;
+
+  font-size: 28px;
+
+  font-weight: bold;
+}
+
+#scoreDisplay {
+
+  font-size: 90px;
+
+  line-height: 1;
+}
+
+#oversDisplay,
+#ballsLeftDisplay,
+#needDisplay {
+
+  font-size: 26px;
+
+  font-weight: bold;
+}
+
+#currentOverDisplay {
+
+  font-size: 26px;
+
+  padding: 20px;
+
+  border-radius: 16px;
+}
+
+#overHistoryDisplay {
+
+  max-height: 300px;
+
+  overflow-y: auto;
+
+  font-size: 20px;
+
+  line-height: 1.8;
+
+  padding: 20px;
+}
+
+.history-title {
+
+  margin-top: 10px;
+
+  font-size: 28px;
+
+  font-weight: bold;
+}
+
+/* Phone optimization */
+
+@media (max-width: 600px) {
+
+  body {
+
+    padding: 10px;
+  }
+
+  .container {
+
+    width: 100%;
+  }
+
+  #scoreDisplay {
+
+    font-size: 80px;
+  }
+
+  button {
+
+    height: 80px;
+
+    font-size: 24px;
+  }
+
+  #currentOverDisplay {
+
+    font-size: 24px;
+  }
+
+  #overHistoryDisplay {
+
+    font-size: 18px;
+  }
+}
+/* =========================
+   TOSS SCREEN FIX
+========================= */
+
+#headBtn,
+#tailBtn {
+
+  background: white !important;
+
+  color: black !important;
+
+  border: 3px solid #ffd700 !important;
+
+  font-size: 34px !important;
+
+  font-weight: bold !important;
+
+  height: 90px !important;
+}
+
+#flipBtn,
+#continueBtn,
+#startMatchBtn {
+
+  background: #ffd700 !important;
+
+  color: black !important;
+
+  border: 3px solid white !important;
+
+  font-size: 32px !important;
+
+  font-weight: bold !important;
+
+  height: 90px !important;
+}
+
+#selectedChoice {
+
+  font-size: 24px !important;
+
+  font-weight: bold !important;
+
+  color: white !important;
+
+  margin: 15px 0 !important;
+}
+
+#tossResult {
+
+  font-size: 28px !important;
+
+  font-weight: bold !important;
+
+  color: white !important;
+
+  line-height: 1.6 !important;
+
+  margin-top: 15px !important;
+}
+
+.selected-toss {
+
+  background: #ffd700 !important;
+
+  color: black !important;
+
+  border: 4px solid white !important;
+
+  box-shadow: 0 0 15px #ffd700 !important;
+}
+/* =========================
+   TOSS INFO
+========================= */
+
+#selectedCall {
+
+  font-size: 22px;
+
+  font-weight: bold;
+
+  color: white;
+
+  margin: 15px 0;
+}
+
+#result {
+
+  font-size: 30px;
+
+  font-weight: bold;
+
+  color: white;
+
+  line-height: 1.7;
+
+  margin-top: 20px;
+}
+/* MATCH SETUP LABEL */
+
+label {
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    color: white;
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    text-align: left;
+}
