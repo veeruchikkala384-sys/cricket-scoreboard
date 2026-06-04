@@ -287,19 +287,107 @@ function addNoBall() {
     return;
   }
 
+  let option = prompt(
+`NO BALL
+
+Enter:
+
+0
+1
+2
+3
+4
+6
+
+RO0
+RO1
+RO2`
+  );
+
+  if (option === null) {
+    return;
+  }
+
+  option = option.trim().toUpperCase();
+
+  let runs = 0;
+  let wicket = false;
+  let display = "NB";
+
+  switch(option) {
+
+    case "0":
+      runs = 1;
+      display = "NB";
+      break;
+
+    case "1":
+      runs = 2;
+      display = "NB+1";
+      break;
+
+    case "2":
+      runs = 3;
+      display = "NB+2";
+      break;
+
+    case "3":
+      runs = 4;
+      display = "NB+3";
+      break;
+
+    case "4":
+      runs = 5;
+      display = "NB+4";
+      break;
+
+    case "6":
+      runs = 7;
+      display = "NB+6";
+      break;
+
+    case "RO0":
+      runs = 1;
+      wicket = true;
+      display = "NB(RO0)";
+      break;
+
+    case "RO1":
+      runs = 2;
+      wicket = true;
+      display = "NB+1(RO)";
+      break;
+
+    case "RO2":
+      runs = 3;
+      wicket = true;
+      display = "NB+2(RO)";
+      break;
+
+    default:
+      alert("Invalid Option");
+      return;
+  }
+
+  score += runs;
+
+  if (wicket) {
+    wickets++;
+  }
+
   history.push({
-    type: "noball"
+    type: "noball",
+    runs: runs,
+    wicket: wicket,
+    display: display
   });
 
-  score++;
-
-  currentOver.push("NB");
+  currentOver.push(display);
 
   refreshBoard();
 
   checkMatchResult();
 }
-
 // =====================
 // DEAD BALL
 // =====================
