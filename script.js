@@ -512,6 +512,48 @@ function removeLastOverEvent() {
 }
 
 // =====================
+// ADD OVERS
+// =====================
+
+function addOvers() {
+
+  let extraOvers = prompt(
+`ADD OVERS
+
+Enter:
+
+1
+2
+3
+4
+5`
+  );
+
+  if (extraOvers === null) {
+    return;
+  }
+
+  extraOvers = parseInt(extraOvers);
+
+  if (
+    isNaN(extraOvers) ||
+    extraOvers < 1 ||
+    extraOvers > 5
+  ) {
+    alert("Enter 1 to 5 only");
+    return;
+  }
+
+  totalBalls += extraOvers * 6;
+
+  alert(
+    extraOvers +
+    " over(s) added"
+  );
+
+  refreshBoard();
+}
+// =====================
 // END INNINGS
 // =====================
 
