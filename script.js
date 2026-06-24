@@ -481,9 +481,19 @@ function undoLastBall() {
       break;
 
     case "noball":
-      score--;
-      removeLastOverEvent();
-      break;
+
+  if (last.runs) {
+    score -= last.runs;
+  } else {
+    score--;
+  }
+
+  if (last.wicket) {
+    wickets--;
+  }
+
+  removeLastOverEvent();
+  break;
 
     case "deadball":
       removeLastOverEvent();
